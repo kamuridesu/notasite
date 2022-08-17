@@ -1,0 +1,28 @@
+name: CI
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  deploy:
+    name: Deploy to aws
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && 'refs/head/master'
+    steps:
+      - name: Configure SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/aws
+          chmod 600 ~/.ssh/aws
+          cat >>~/.ssh/config <<END
+          Host kamuridesu.tech
+            HostName kamuridesu.tech
+            User admin
+            IdentityFile ~/.ssh/aws
+            StrictHostKeyChecking no
+          END
+        env:
+            SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        
+      - name: Clone or update repository
+        run: ssh admin@kamuridesu.tech "cd ${{ github.event.repository.name }} && git pull || git clone https://github.com/${{ github.repository }}.git"
+      - name: Generate or update site
+        run: |
+          ssh admin@kamuridesu.tech "cd ${{ github.event.repository.name }} && make html && make publish && make serve PORT=5002"

@@ -1,6 +1,8 @@
+import os
+
 AUTHOR = 'kamuridesu'
 SITENAME = 'Ergo'
-SITEURL = ''
+SITEURL = 'http://kamuridesu.tech'
 
 PATH = 'content'
 
@@ -27,7 +29,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 5
 
-THEME = "C:\\Users\\kamuri\\pelican-themes\\monospace"
+THEME = os.path.join("themes", "monospace")
 
 STATIC_PATHS = ['images', 'favicon.ico', 'documents']
 
