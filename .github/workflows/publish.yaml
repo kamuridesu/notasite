@@ -24,7 +24,7 @@ jobs:
       - name: Clone or update repository
         run: ssh admin@kamuridesu.tech "cd ${{ github.event.repository.name }} && git pull || git clone https://github.com/${{ github.repository }}.git"
       - name: Install requirement
-        run: ssh admin@kamuridesu.tech "pelican --version || cd ${{ github.event.repository.name }} && sudo python3 -m pip install -r requirements.txt"
+        run: ssh admin@kamuridesu.tech "cd ${{ github.event.repository.name }} && sudo python3 -m pip install -r requirements.txt"
       - name: Generate or update site
         run: |
-          ssh admin@kamuridesu.tech "cd ${{ github.event.repository.name }} && make html && make publish && make serve PORT=5002"
+          ssh admin@kamuridesu.tech "cd ${{ github.event.repository.name }} && nohup python3 -u -m http.server 5002 2> log.txt"

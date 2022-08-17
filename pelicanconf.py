@@ -33,6 +33,18 @@ THEME = os.path.join("themes", "monospace")
 
 STATIC_PATHS = ['images', 'favicon.ico', 'documents']
 
+MARKUP = ('md',)
+# Markdown Configuration:
+MARKDOWN = {
+    'extension_configs': {
+	'markdown.extensions.codehilite': {'css_class': 'highlight'},
+	'markdown.extensions.toc' : {},
+	'markdown.extensions.extra': {},
+	'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
