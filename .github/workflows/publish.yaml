@@ -27,4 +27,4 @@ jobs:
         run: ssh admin@kamuridesu.tech "cd ${{ github.event.repository.name }} && sudo python3 -m pip install -r requirements.txt"
       - name: Generate or update site
         run: |
-          ssh admin@kamuridesu.tech "cd ${{ github.event.repository.name }} && nohup python3 -u -m http.server 5002 2> log.txt"
+          ssh admin@kamuridesu.tech "cd ${{ github.event.repository.name }} && nohup python3 -u -m http.server 5002 &"
