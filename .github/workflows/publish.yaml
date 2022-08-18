@@ -1,10 +1,10 @@
-name: CI
-on: [push, pull_request, workflow_dispatch]
+name: CD
+on: [push, workflow_dispatch]
 jobs:
   deploy:
     name: Deploy to aws
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && 'refs/head/master'
+    if: github.event_name == 'push' && 'refs/head/main'
     steps:
       - name: Configure SSH key
         run: |
@@ -28,4 +28,4 @@ jobs:
       - name: Stop and restart docker container
         run: |
           ssh admin@kamuridesu.tech "sudo docker rm -f ${{ github.repository }}"
-          ssh admin@kamuridesu.tech "sudo docker run --name ${{ github.event.repository.name }} --restart always --memory=100m -d ${{ github.repository }}"
+          ssh admin@kamuridesu.tech "sudo docker run --name ${{ github.event.repository.name }} --restart always --memory=100m -d -p 5002:80 ${{ github.repository }}"
