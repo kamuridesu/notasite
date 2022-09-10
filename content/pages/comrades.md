@@ -9,3 +9,5 @@ Hey, if you want to see more interesting content, you can go to:
 [FOSS, Kernel, Software](https://crosscat.me/)
 
 [Computers and more](https://icaropablo.github.io)
+
+[Random things](http://glassnerves.sdf.org/)
