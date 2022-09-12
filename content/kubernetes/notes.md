@@ -8,12 +8,13 @@ What problems does Kubernetes solve?
 - Migration from monolith to microservices
 - Increased usage of containers
 - Proper way to manage containers and environments
+
 What features do orchestration tools offer?
 - High Availability
 - Scalability
 - Disaster recovery (backup and restore)
 
-# Kubernetes Architecture:
+# Kubernetes Architecture
 Control Plane
 
 Nodes (with Kubelet "node agent") running on them. Kubelet is a Kubernetes process that enables clusters to talk to each other and executes tasks.
@@ -82,9 +83,10 @@ However deploying databases on K8S is more difficult, that's why you'll see data
 # Kubernetes Configuration
 All the configuration of the Kubernetes cluster goes through a service called API Server (UI, API, CLI, all talks to the API Server). All the communication must be realized through the API Server 
 using JSON or YAML.
+
 The configuration is declarative. You say what you expect the result to be and the Controller Manager will do the possible to make sure that the actual state is the desired state.
 
-Configuration File:
+## Configuration File
 
 The two first lines you use to declare what component you're creating.
 
@@ -100,7 +102,7 @@ Inside the specification, the attributes will be specific to the kind of compone
 
 Where does Kubernetes get this status data? From ETCD. ETCD holds the current status of any Kubernetes component.
 
-Format of configuration files:
+## Format of configuration files
 
 The format of configuration files is YAML. YAML is a human-friendly, easy-to-read data serialization standard. It also is very strict about indentation.
 
