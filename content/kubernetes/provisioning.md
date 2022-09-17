@@ -1,5 +1,5 @@
 Title: Provisioning Kubernetes control-plane on a VM using Vagrant
-Date: 2022-09-15 17:06
+Date: 2022-09-17 11:35
 
 # Tools needed
 To deploy our control-plane we need some tools:
@@ -96,7 +96,7 @@ containerd config default > /etc/containerd/config.toml
 sed -i "s/systemdCgroup = false/systemdCgroup = true/" /etc/containerd/config.toml
 ```
 Aannnd let's bootstrap Kubernetes! I'm using `--apiserver-cert-extra-sans=192.168.56.10` to access the Kubernetes api from outside the Virtual Machine using the custom IP.
-````
+```
 kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-cert-extra-sans=192.168.56.10
 export KUBECONFIG=/etc/kubernetes/admin.conf
 ```
