@@ -41,13 +41,6 @@ vagrant ssh
 # Deploying Kubernetes
 ## Setting up required packages
 The following packages are needed to install Kubernetes:
-- htop
-- vim
-- apt-transport-https
-- ca-certificates
-- curl
-- software-properties-common
-- gnupg
 ```sh
 apt-get update
 apt-get upgrade -y
