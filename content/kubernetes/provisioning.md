@@ -3,8 +3,8 @@ Date: 2022-09-17 11:35
 
 # Tools needed
 To deploy our control-plane we need some tools:
-- (Vagrant)[https://www.vagrantup.com/]
-- (VirtualBox)[https://www.virtualbox.org/]
+- [Vagrant](https://www.vagrantup.com/)
+- [VirtualBox](https://www.virtualbox.org/)
 
 # Creating Vagrantfile and starting the Virtual Machine
 First, create a folder to hold the configs files:
