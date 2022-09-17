@@ -39,7 +39,6 @@ vagrant ssh
 ```
 
 # Deploying Kubernetes
-## Setting up required packages
 The following packages are needed to install Kubernetes:
 ```sh
 apt-get update
