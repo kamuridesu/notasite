@@ -1,3 +1,3 @@
 # My site
 made with pelican
-using modified (black) monospace theme
+using modified (black) mnmlist theme
