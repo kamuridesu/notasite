@@ -2,7 +2,7 @@ import os
 
 AUTHOR = 'kamuridesu'
 SITENAME = 'Ergo'
-SITEURL = 'https://www.kamuridesu.tech'
+SITEURL = 'https://www.kamuridesu.com'
 
 PATH = 'content'
 
