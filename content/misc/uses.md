@@ -1,4 +1,4 @@
-Title: My Stack
+Title: uses
 Date: 2023-09-12 12:00
 
 # Technologies I work with
