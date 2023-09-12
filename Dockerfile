@@ -7,3 +7,4 @@ RUN pelican -o output -s pelicanconf.py
 
 FROM nginx:1.25.1
 COPY --from=build /app/output /usr/share/nginx/html
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
