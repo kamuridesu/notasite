@@ -5,11 +5,13 @@ Date: 2022-09-09 6:11
 Kubernetes is a container orchestration tool developed by Google. It helps you to manage containerized applications in different deployments.
 
 What problems does Kubernetes solve?
+
 - Migration from monolith to microservices
 - Increased usage of containers
 - Proper way to manage containers and environments
 
 What features do orchestration tools offer?
+
 - High Availability
 - Scalability
 - Disaster recovery (backup and restore)
@@ -71,6 +73,7 @@ Deployments are useful for Stateless apps and StatefulSets are for stateful apps
 
 However deploying databases on K8S is more difficult, that's why you'll see databases hosted outside of the cluster more often than inside. Generally, the cluster keeps all the applications that do not have states, using only deployments.
 ## Wrap up:
+
 - Pod: Abstraction of containers
 - Service: Communication
 - Ingress: route traffic into the cluster

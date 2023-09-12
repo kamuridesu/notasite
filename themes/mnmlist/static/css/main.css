@@ -14,8 +14,8 @@ body {
   color: rgb(255, 255, 255);
   font: 20px Hoefler Text, bodyfont, serif;
   line-height: 30px;
-  max-width: 30em;
-  margin: 60px 14px 0 64px;
+  /* max-width: 60em; */
+  margin: 60px 60px 0 64px;
 }
 
 /* line 28, ../../compass/src/main.scss */
